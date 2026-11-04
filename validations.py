@@ -2,9 +2,9 @@ def check_valid_num(num) -> bool:
     try:
         num = int(num)
     except:
-        print ("invalid num, please re enter information")
+        print ("invalid input, please re enter")
         return False
-    if  num > 0:
+    if  num >= 0:
         return True
     else:
         return False
@@ -30,6 +30,6 @@ def check_if_exists(storage:list,info_type,info) -> bool:
 
 def check_played_already(matches,home_team_id,away_team_id):
     for match in matches:
-        if match["home_team_id"] == home_team_id and match[away_team_id] == away_team_id:
+        if (match["home_team_id"] == home_team_id and match[away_team_id] == away_team_id) or (match["home_team_id"] == away_team_id and match[away_team_id] == home_team_id):
             return False
     return True
