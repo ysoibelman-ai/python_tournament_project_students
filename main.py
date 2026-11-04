@@ -2,6 +2,8 @@
 from teams_file import add_team
 from matches_file import add_match
 from outputs import show_teams,main_menu
+from standings import sort_teams,get_tournament_summary
+from outputs import show_standings_table,show_tournament_summary
 
 """
 teams = []
@@ -17,11 +19,12 @@ matches = [{"home_team_id": 1, "away_team_id": 2, "home_goals": 3, "away_goals":
 def main():
     teams = []
     matches = []
-    main_menu(teams,matches)
     add_team(teams)
     add_team(teams)
     add_match(teams,matches)
-    show_teams (teams)
+    # add_match(teams,matches)
+    show_standings_table(sort_teams(teams))
+    show_tournament_summary (get_tournament_summary(teams,matches))
     
 
 
