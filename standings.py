@@ -4,19 +4,21 @@ def sort_teams(teams):
 
 def get_top_team(teams):
     sorted_teams = sort_teams(teams)
-    top_team = sorted_teams[1]
+    top_team = sorted_teams[0]
     return top_team
 
 def get_best_attacking_team(teams):
     top_attacking_team = {}
-    top_attack = 0
+    top_attack = -1
     for team in teams:
         if team["goals_for"] > top_attack:
             top_attack = team["goals_for"]
             top_attacking_team = team
     return top_attacking_team
 
-def get_team_success_rate(teams):
+def get_team_success_rate(teams,matches):
+    if matches == []:
+        return "No Matches Played"
     teams_success_rate = []
     for team in teams:
         team_success = {team["name"]:(int(team["points"] / team["played"]*3 * 100))}

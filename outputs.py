@@ -2,7 +2,6 @@ from tabulate import tabulate
 import json
 
 def show_main_menu():
-    # while True:
         menu_selection = input("""
 ========== TOURNAMENT MANAGER ==========
 1. Add team
