@@ -30,8 +30,9 @@ def get_teams_without_wins(teams):
             teams_without_wins.append(team)
     return teams_without_wins
 
-
 def get_tournament_summary(teams,matches):
+    if matches == []:
+        return False
     total_goals = 0
     number_of_teams = len(teams)
     number_of_games = len(matches)
@@ -42,8 +43,3 @@ def get_tournament_summary(teams,matches):
     total_draw_games = sum(filter(lambda t: t["draws"] > 0, teams))
     leading_team = (sort_teams(teams)[1])
     return [number_of_teams,number_of_games,total_goals,goal_avg_per_game,total_draw_games,leading_team]
-
-
-
-
-
