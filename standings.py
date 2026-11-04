@@ -21,7 +21,7 @@ def get_team_success_rate(teams,matches):
         return "No Matches Played"
     teams_success_rate = []
     for team in teams:
-        team_success = {team["name"]:(int(team["points"] / team["played"]*3 * 100))}
+        team_success = {team["name"]:f"Success rate is: {(int(team["points"] / (team["played"]*3 * 100)))}"}
         teams_success_rate.append(team_success)
     return teams_success_rate
 

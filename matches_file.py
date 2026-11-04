@@ -3,6 +3,9 @@ from input_file import get_input
 from update_team import update_teams
 
 def add_match(teams,matches):
+    if len (teams) < 2:
+        print ("Not enough teams to register match")
+        return
     while True:
 
         home_team_id = get_input("Enter home team id")
