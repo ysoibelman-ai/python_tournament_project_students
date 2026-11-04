@@ -40,3 +40,10 @@ def check_if_exists(storage:list,info_type,info) -> bool:
         if part[info_type] == info:
             return False
     return True
+
+def check_played_already(matches,home_team_id,away_team_id):
+    for match in matches:
+        if match["home_team_id"] == home_team_id and match[away_team_id] == away_team_id:
+            return False
+    return True
+

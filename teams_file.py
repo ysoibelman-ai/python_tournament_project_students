@@ -29,7 +29,6 @@ def add_team(teams:list) -> list:
    
     team = create_new_team(team_name,team_id)
     teams.append(team)
-    return teams
 
 def create_new_team(team_name,team_id) -> dict:
     team = {
@@ -38,3 +37,7 @@ def create_new_team(team_name,team_id) -> dict:
     "goals_for": 0, "goals_against": 0, "points": 0
     }
     return team
+
+
+def update_team(teams):
+     pass
