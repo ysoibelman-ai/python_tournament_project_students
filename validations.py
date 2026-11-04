@@ -19,19 +19,6 @@ def check_not_equal(info1,info2) -> bool:
         return False
     return True
 
-
-"""
-teams = []
-team = {
-    "id": 1, "name": "Maccabi", "played": 0,
-    "wins": 0, "draws": 0, "losses": 0,
-    "goals_for": 0, "goals_against": 0, "points": 0
-}
-
-matches = [{"home_team_id": 1, "away_team_id": 2, "home_goals": 3, "away_goals": 1}]
-"""
-
-
 def check_if_exists(storage:list,info_type,info) -> bool:
     """
     if exists returns False
@@ -46,4 +33,3 @@ def check_played_already(matches,home_team_id,away_team_id):
         if match["home_team_id"] == home_team_id and match[away_team_id] == away_team_id:
             return False
     return True
-

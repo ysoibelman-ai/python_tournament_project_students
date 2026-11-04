@@ -1,4 +1,3 @@
-# Add Team
 from validations import check_if_exists,check_not_equal,check_valid_name,check_valid_num
 from input_file import get_input
 
@@ -37,7 +36,3 @@ def create_new_team(team_name,team_id) -> dict:
     "goals_for": 0, "goals_against": 0, "points": 0
     }
     return team
-
-
-def update_team(teams):
-     pass

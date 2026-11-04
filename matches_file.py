@@ -35,12 +35,11 @@ def add_match(teams,matches):
 
         home_goals = int(home_goals)
         away_goals = int(away_goals)
-        
+
         match = create_new_match(home_team_id,away_team_id,home_goals,away_goals)
         matches.append(match)
         update_teams(teams,match)
         break
-
 
 def create_new_match(home_team_id,away_team_id,home_goals,away_goals):
     match = {"home_team_id": home_team_id, "away_team_id": away_team_id, "home_goals": home_goals, "away_goals": away_goals}
